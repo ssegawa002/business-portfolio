@@ -1,173 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Supplier & Procurement Analytics — Abdul Karim Ssegawa</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Abdul Karim Ssegawa — Business Informatics portfolio focused on supplier analytics, procurement, inventory and business data.">
+<title>Abdul Karim Ssegawa | Supplier & Procurement Analytics</title>
 <style>
-  :root{
-    --teal:#1F5C57; --teal-light:#E8F0EF; --ink:#1e2422; --muted:#5b6a67;
-    --bg:#ffffff; --card:#ffffff; --border:#e2e8e6; --ok:#dff2e1; --ok-ink:#276a37;
-    --risk:#fbe3d8; --risk-ink:#a24a1f;
-    box-sizing:border-box;
-    padding-top: env(safe-area-inset-top, 0px);
-    padding-bottom: env(safe-area-inset-bottom, 0px);
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg:#14181a; --card:#1b2123; --ink:#e9efed; --muted:#a7b3b0; --border:#2b3335;
-      --teal-light:#182827; --ok:#173324; --ok-ink:#8fe0a5; --risk:#3a2417; --risk-ink:#f0a273;
-    }
-  }
-  :root[data-theme="dark"]{
-    --bg:#14181a; --card:#1b2123; --ink:#e9efed; --muted:#a7b3b0; --border:#2b3335;
-    --teal-light:#182827; --ok:#173324; --ok-ink:#8fe0a5; --risk:#3a2417; --risk-ink:#f0a273;
-  }
-  html{ scroll-padding-top: env(safe-area-inset-top, 0px); }
-  *{ box-sizing:border-box; }
-  body{
-    margin:0; background:var(--bg); color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-    line-height:1.5;
-  }
-  .wrap{ max-width:760px; margin:0 auto; padding:28px 20px 60px; }
-  header{ margin-bottom:28px; }
-  h1{ font-size:1.5rem; margin:0 0 4px; color:var(--teal); }
-  .sub{ color:var(--muted); font-size:0.92rem; margin:0; }
-  .intro{ font-size:0.95rem; color:var(--ink); margin-top:14px; }
-  section{ margin-top:36px; }
-  h2{ font-size:1.05rem; color:var(--teal); border-bottom:2px solid var(--teal); padding-bottom:6px; margin-bottom:12px; }
-  .project-label{ font-size:0.72rem; letter-spacing:0.08em; font-weight:700; color:var(--muted); margin:0 0 4px; }
-  .project-title{ font-size:1.25rem; color:var(--ink); border:none; padding:0; margin:0 0 18px; }
-  p.note{ color:var(--muted); font-size:0.85rem; margin-top:10px; }
-  .table-wrap{ overflow-x:auto; border:1px solid var(--border); border-radius:8px; }
-  table{ width:100%; border-collapse:collapse; font-size:0.87rem; min-width:480px; }
-  th{ background:var(--teal); color:#fff; text-align:left; padding:9px 10px; white-space:nowrap; }
-  td{ padding:8px 10px; border-top:1px solid var(--border); white-space:nowrap; }
-  tr:nth-child(even) td{ background:var(--teal-light); }
-  .tag{ display:inline-block; padding:2px 9px; border-radius:99px; font-size:0.78rem; font-weight:600; }
-  .tag.ok{ background:var(--ok); color:var(--ok-ink); }
-  .tag.risk{ background:var(--risk); color:var(--risk-ink); }
-  .controls{ display:flex; gap:14px; flex-wrap:wrap; align-items:flex-end; margin-bottom:16px; }
-  .field label{ display:block; font-size:0.8rem; color:var(--muted); margin-bottom:4px; }
-  select, input[type=number]{
-    font-size:0.9rem; padding:7px 9px; border-radius:6px; border:1px solid var(--border);
-    background:var(--card); color:var(--ink); min-width:150px;
-  }
-  footer{ margin-top:48px; padding-top:18px; border-top:1px solid var(--border); color:var(--muted); font-size:0.82rem; }
-</style>
-</head>
+:root{--navy:#12263a;--blue:#1769aa;--teal:#087f8c;--ink:#1c2936;--muted:#607080;--bg:#f5f8fa;--card:#fff;--line:#dfe7ec;--soft:#eaf5f6;--gold:#d98b24;--shadow:0 12px 32px rgba(18,38,58,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}.wrap{max-width:1120px;margin:auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}nav .inner{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;color:var(--navy);text-decoration:none}.navlinks{display:flex;gap:20px;flex-wrap:wrap}.navlinks a{color:var(--muted);text-decoration:none;font-size:.92rem}.navlinks a:hover{color:var(--blue)}
+.hero{padding:82px 0 70px;background:linear-gradient(135deg,#eef7fa 0%,#f8fbfc 60%,#edf5f1 100%);border-bottom:1px solid var(--line)}.eyebrow{margin:0 0 10px;text-transform:uppercase;letter-spacing:.13em;font-size:.75rem;font-weight:800;color:var(--teal)}h1{font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.02;letter-spacing:-.045em;margin:0 0 20px;color:var(--navy);max-width:900px}h1 span{color:var(--blue)}.lead{font-size:1.15rem;color:var(--muted);max-width:800px;margin:0 0 28px}.actions{display:flex;gap:11px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 16px;border-radius:9px;text-decoration:none;font-weight:750;border:1px solid var(--blue);transition:.15s}.btn.primary{background:var(--blue);color:#fff}.btn.secondary{background:#fff;color:var(--blue)}.btn.teal{background:var(--teal);border-color:var(--teal);color:#fff}.btn:hover{transform:translateY(-1px)}
+section{padding:62px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:24px}.section-head h2{font-size:1.9rem;line-height:1.15;margin:0;color:var(--navy)}.section-head>p{max-width:620px;margin:0;color:var(--muted)}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:25px;box-shadow:var(--shadow)}.card h3{margin:0 0 10px;color:var(--navy)}.muted{color:var(--muted)}.callout{margin-top:16px;padding:14px 16px;background:var(--soft);border-left:4px solid var(--teal);border-radius:8px}.pillrow{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.pill{font-size:.82rem;font-weight:700;padding:5px 10px;border-radius:999px;background:#edf3f7;color:var(--navy)}
+.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.project{display:flex;flex-direction:column}.project .meta{font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;font-weight:800;color:var(--teal);margin-bottom:8px}.project h3{font-size:1.35rem;margin-bottom:8px}.project ul{padding-left:20px}.project li{margin:6px 0}.project .actions{margin-top:auto;padding-top:15px}.project .tools{font-size:.9rem;color:var(--muted)}.statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}.stat{padding:18px;background:#fff;border:1px solid var(--line);border-radius:12px}.stat strong{display:block;font-size:1.15rem;color:var(--navy)}.stat span{font-size:.82rem;color:var(--muted)}
+.next{background:var(--navy);color:#fff;border-radius:22px;padding:38px}.next h2{margin:0 0 10px}.next p{color:#d4e0e9}.contact{background:linear-gradient(135deg,var(--teal),var(--navy));color:#fff;border-radius:22px;padding:38px}.contact p{color:#d9eef0;max-width:700px}.contact .btn.secondary{border-color:#fff;color:var(--navy)}footer{text-align:center;color:var(--muted);padding:35px 0 60px;font-size:.85rem}
+@media(max-width:820px){.grid2,.projects{grid-template-columns:1fr}.statgrid{grid-template-columns:repeat(2,1fr)}.section-head{display:block}.section-head>p{margin-top:10px}nav .inner{padding:12px 0}.navlinks{gap:12px}}
+@media(max-width:520px){.statgrid{grid-template-columns:1fr}.wrap{padding:0 16px}.hero{padding-top:58px}}
+</style></head>
 <body>
-<div class="wrap">
-  <header>
-    <h1>Supplier & Procurement Analytics</h1>
-    <p class="sub">Abdul Karim Ssegawa — self-directed Excel projects, built alongside my Data Management coursework</p>
-    <p class="intro">Two small, separate projects exploring workflows that come up across procurement, inventory and supply chain roles: tracking supplier delivery performance against demand, and scoring suppliers on sustainability alongside reliability. Each is its own Excel workbook — this page summarises both.</p>
-  </header>
-
-  <p class="project-label">PROJECT 1</p>
-  <h2 class="project-title">Inventory Replenishment & Supplier Performance Tracker</h2>
-  <section>
-    <h2>Stock Coverage Dashboard</h2>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Product</th><th>Forecasted Demand</th><th>Confirmed Supply</th><th>Coverage</th><th>Status</th></tr></thead>
-        <tbody>
-          <tr><td>Wireless Earbuds</td><td>2,700</td><td>2,650</td><td>98.1%</td><td><span class="tag risk">AT RISK</span></td></tr>
-          <tr><td>Phone Case (Bulk Pack)</td><td>5,020</td><td>5,020</td><td>100.0%</td><td><span class="tag ok">OK</span></td></tr>
-          <tr><td>USB-C Charging Cable</td><td>1,880</td><td>1,860</td><td>98.9%</td><td><span class="tag risk">AT RISK</span></td></tr>
-          <tr><td>Laptop Stand</td><td>1,680</td><td>1,680</td><td>100.0%</td><td><span class="tag ok">OK</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note">Built from 24 purchase orders across 4 suppliers, with a Status formula that auto-flags late and short deliveries. Wireless Earbuds and USB-C Charging Cable are flagged because of one short and one late delivery each — the workbook traces this down to the exact order line.</p>
-  </section>
-
-  <section>
-    <h2>What-If Scenario (interactive)</h2>
-    <div class="controls">
-      <div class="field">
-        <label for="supplier">Supplier</label>
-        <select id="supplier"></select>
-      </div>
-      <div class="field">
-        <label for="delay">Simulated delay (days)</label>
-        <input type="number" id="delay" value="10" min="0" max="60">
-      </div>
-    </div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Product</th><th>Demand</th><th>Confirmed Supply</th><th>Adjusted Supply</th><th>Adjusted Coverage</th><th>Impact</th></tr></thead>
-        <tbody id="whatifBody"></tbody>
-      </table>
-    </div>
-    <p class="note">Assumption: a simulated delay treats that supplier's full confirmed quantity for its item as at-risk — a simplification for this demo; a production MRP tool would isolate only the specific late order line.</p>
-  </section>
-
-  <p class="project-label" style="margin-top:44px;">PROJECT 2</p>
-  <h2 class="project-title">Supplier Sustainability Scorecard</h2>
-  <section>
-    <h2>Composite Sourcing Score</h2>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Supplier</th><th>Category</th><th>Sustainability Score</th><th>On-Time Rate</th><th>Composite Score</th><th>Recommendation</th></tr></thead>
-        <tbody>
-          <tr><td>Supplier Alpha</td><td>Electronics components</td><td>55.0</td><td>60%</td><td>57.0</td><td><span class="tag risk">Review</span></td></tr>
-          <tr><td>Supplier Beta</td><td>Packaging & accessories</td><td>91.3</td><td>80%</td><td>86.8</td><td><span class="tag ok">Preferred</span></td></tr>
-          <tr><td>Supplier Gamma</td><td>Cables & connectors</td><td>5.0</td><td>60%</td><td>27.0</td><td><span class="tag risk">Review</span></td></tr>
-          <tr><td>Supplier Delta</td><td>Hardware & fittings</td><td>77.4</td><td>80%</td><td>78.4</td><td><span class="tag ok">Preferred</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note">Sustainability Score weights emissions intensity (35%), renewable energy use (25%), ISO 14001 certification (20%), and proximity to site (20%). Composite Sourcing Score blends that with on-time delivery performance (60/40) — many retailers and manufacturers now weigh both dimensions when deciding which suppliers to grow volume with.</p>
-  </section>
-
-  <footer>
-    Each project is a separate Excel workbook with live formulas (SUMIFS, COUNTIFS, nested IF, weighted scoring, conditional formatting), built alongside my Data Management coursework. Both are attached with my application. This page is a summary, not a data source.
-  </footer>
-</div>
-
-<script>
-  const items = [
-    { id:"Wireless Earbuds", supplier:"Supplier Alpha", demand:2700, supply:2650 },
-    { id:"Phone Case (Bulk Pack)", supplier:"Supplier Beta", demand:5020, supply:5020 },
-    { id:"USB-C Charging Cable", supplier:"Supplier Gamma", demand:1880, supply:1860 },
-    { id:"Laptop Stand", supplier:"Supplier Delta", demand:1680, supply:1680 },
-  ];
-  const suppliers = [...new Set(items.map(i => i.supplier))];
-  const sel = document.getElementById("supplier");
-  suppliers.forEach(s => {
-    const opt = document.createElement("option");
-    opt.value = s; opt.textContent = s;
-    sel.appendChild(opt);
-  });
-  sel.value = "Supplier Beta";
-
-  function render(){
-    const chosenSupplier = sel.value;
-    const delay = Math.max(0, Number(document.getElementById("delay").value) || 0);
-    const body = document.getElementById("whatifBody");
-    body.innerHTML = "";
-    items.forEach(item => {
-      const atRiskQty = (delay > 0 && item.supplier === chosenSupplier) ? item.supply : 0;
-      const adjSupply = item.supply - atRiskQty;
-      const adjCoverage = item.demand > 0 ? (adjSupply / item.demand) : 0;
-      const impact = (atRiskQty > 0 && adjCoverage < 1) ? "AT RISK" : "OK";
-      const tr = document.createElement("tr");
-      tr.innerHTML = `
-        <td>${item.id}</td>
-        <td>${item.demand.toLocaleString()}</td>
-        <td>${item.supply.toLocaleString()}</td>
-        <td>${adjSupply.toLocaleString()}</td>
-        <td>${(adjCoverage*100).toFixed(1)}%</td>
-        <td><span class="tag ${impact === "AT RISK" ? "risk" : "ok"}">${impact}</span></td>
-      `;
-      body.appendChild(tr);
-    });
-  }
-  sel.addEventListener("change", render);
-  document.getElementById("delay").addEventListener("input", render);
-  render();
-</script>
-</body>
-</html>
+<nav><div class="wrap inner"><a class="brand" href="#top">AKS · Supplier Analytics</a><div class="navlinks"><a href="#about">Profile</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></div></nav>
+<header class="hero" id="top"><div class="wrap">
+<p class="eyebrow">Business Informatics · Procurement · Data</p>
+<h1>Abdul Karim <span>Ssegawa</span></h1>
+<p class="lead">Business Informatics student building practical supplier, procurement and inventory solutions with data and technology. This portfolio focuses on turning operational questions into structured KPIs, analysis and decision-support tools.</p>
+<div class="actions"><a class="btn primary" href="#projects">Explore supplier projects</a><a class="btn secondary" href="https://github.com/ssegawao02/business-portfolio" target="_blank" rel="noopener">View GitHub</a></div>
+<div class="statgrid"><div class="stat"><strong>2</strong><span>Featured supplier projects</span></div><div class="stat"><strong>Excel</strong><span>Primary analytics tool</span></div><div class="stat"><strong>Inventory</strong><span>Replenishment focus</span></div><div class="stat"><strong>Procurement</strong><span>Supplier decision support</span></div></div>
+</div></header>
+<main>
+<section id="about"><div class="wrap"><div class="section-head"><div><p class="eyebrow">Profile</p><h2>Business problems first. Technology as the tool.</h2></div><p>I am interested in how data and information systems can improve procurement, inventory, supplier management and digital business processes.</p></div>
+<div class="grid2"><div class="card"><h3>My portfolio focus</h3><p class="muted">The current work uses supplier and procurement scenarios because they connect business processes with data analysis, KPI design and operational decision-making.</p><div class="callout"><strong>Core question:</strong> What information would a procurement or supply-chain team need to make a better decision?</div></div><div class="card"><h3>What a recruiter can inspect</h3><p class="muted">Each featured project has a project explanation and the actual Excel workbook. You can review the logic, inputs, calculations and outputs rather than only reading a skills list.</p><div class="pillrow"><span class="pill">Excel analytics</span><span class="pill">Supplier KPIs</span><span class="pill">Inventory</span><span class="pill">Procurement</span></div></div></div>
+</div></section>
+<section id="projects"><div class="wrap"><div class="section-head"><div><p class="eyebrow">Featured work</p><h2>Supplier & Procurement Projects</h2></div><p>Two practical projects showing how supplier and inventory data can be structured into decision-support tools.</p></div>
+<div class="projects">
+<article class="card project"><div class="meta">01 · Inventory · Supplier Performance</div><h3>Inventory Replenishment & Supplier Performance Tracker</h3><p class="muted"><strong>Business problem:</strong> identify shortages, delivery delays and stock-coverage risks before they become operational problems.</p><ul><li>Tracks forecast demand against confirmed supplier supply.</li><li>Flags late and short deliveries using formula-driven status logic.</li><li>Summarises stock coverage by SKU.</li><li>Provides a supplier-delay what-if scenario for planning.</li></ul><p class="tools"><strong>Tools & methods:</strong> Excel · SUMIFS · COUNTIFS · IF logic · conditional formatting · data validation</p><div class="actions"><a class="btn primary" href="downloads/Inventory_Replenishment_Supplier_Tracker.xlsx">⬇ Download Excel</a><a class="btn secondary" href="projects/inventory-supplier-tracker.html">View project</a></div></article>
+<article class="card project"><div class="meta">02 · Procurement · Sustainability</div><h3>Supplier Sustainability Scorecard</h3><p class="muted"><strong>Business problem:</strong> compare suppliers using structured sustainability and delivery-performance criteria.</p><ul><li>Combines environmental and operational supplier indicators.</li><li>Uses weighted scoring to create a composite supplier score.</li><li>Includes on-time delivery alongside sustainability measures.</li><li>Turns procurement requirements into measurable KPIs.</li></ul><p class="tools"><strong>Tools & methods:</strong> Excel · weighted scoring · KPI design · conditional formatting</p><div class="actions"><a class="btn primary" href="downloads/Supplier_Sustainability_Scorecard.xlsx">⬇ Download Excel</a><a class="btn secondary" href="projects/supplier-sustainability-scorecard.html">View project</a></div></article>
+</div></div></section>
+<section id="skills"><div class="wrap"><div class="section-head"><div><p class="eyebrow">Capabilities</p><h2>Skills demonstrated through the projects</h2></div></div><div class="grid2"><div class="card"><h3>Data & analytics</h3><p class="muted">Excel formulas, KPI design, data validation, weighted scoring, conditional formatting, operational analysis.</p></div><div class="card"><h3>Business processes</h3><p class="muted">Procurement, supplier performance, replenishment, inventory coverage and sustainability assessment.</p></div><div class="card"><h3>Technology direction</h3><p class="muted">Building further capability in SQL, Python, Power BI, ERP/SAP and business process analysis.</p></div><div class="card"><h3>Decision support</h3><p class="muted">Translating business requirements into structured metrics, exception flags and what-if analysis.</p></div></div></div></section>
+<section><div class="wrap"><div class="next"><p class="eyebrow" style="color:#6fd0d5">Portfolio roadmap</p><h2>Next: connect supplier analytics with SQL, BI and ERP</h2><p>The supplier theme will remain the foundation while future projects expand the technical stack: SQL supplier analysis, a Power BI procurement dashboard, and an SAP/ERP procurement process case study.</p></div></div></section>
+<section id="contact"><div class="wrap"><div class="contact"><p class="eyebrow" style="color:#a9e6e8">Contact</p><h2 style="margin:0 0 10px">Interested in supplier, data or digital-business work?</h2><p>The GitHub repository contains the project documentation and source files behind this portfolio.</p><div class="actions"><a class="btn secondary" href="https://github.com/ssegawao02/business-portfolio" target="_blank" rel="noopener">Open GitHub repository</a></div></div></div></section>
+</main><footer><div class="wrap">© 2026 Abdul Karim Ssegawa · Business Informatics · Supplier & Procurement Analytics</div></footer>
+</body></html>
