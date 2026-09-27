@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Supplier & Procurement Analytics — Abdul Karim Ssegawa</title>
+<style>
+  :root{
+    --teal:#1F5C57; --teal-light:#E8F0EF; --ink:#1e2422; --muted:#5b6a67;
+    --bg:#ffffff; --card:#ffffff; --border:#e2e8e6; --ok:#dff2e1; --ok-ink:#276a37;
+    --risk:#fbe3d8; --risk-ink:#a24a1f;
+    box-sizing:border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14181a; --card:#1b2123; --ink:#e9efed; --muted:#a7b3b0; --border:#2b3335;
+      --teal-light:#182827; --ok:#173324; --ok-ink:#8fe0a5; --risk:#3a2417; --risk-ink:#f0a273;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14181a; --card:#1b2123; --ink:#e9efed; --muted:#a7b3b0; --border:#2b3335;
+    --teal-light:#182827; --ok:#173324; --ok-ink:#8fe0a5; --risk:#3a2417; --risk-ink:#f0a273;
+  }
+  html{ scroll-padding-top: env(safe-area-inset-top, 0px); }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    line-height:1.5;
+  }
+  .wrap{ max-width:760px; margin:0 auto; padding:28px 20px 60px; }
+  header{ margin-bottom:28px; }
+  h1{ font-size:1.5rem; margin:0 0 4px; color:var(--teal); }
+  .sub{ color:var(--muted); font-size:0.92rem; margin:0; }
+  .intro{ font-size:0.95rem; color:var(--ink); margin-top:14px; }
+  section{ margin-top:36px; }
+  h2{ font-size:1.05rem; color:var(--teal); border-bottom:2px solid var(--teal); padding-bottom:6px; margin-bottom:12px; }
+  .project-label{ font-size:0.72rem; letter-spacing:0.08em; font-weight:700; color:var(--muted); margin:0 0 4px; }
+  .project-title{ font-size:1.25rem; color:var(--ink); border:none; padding:0; margin:0 0 18px; }
+  p.note{ color:var(--muted); font-size:0.85rem; margin-top:10px; }
+  .table-wrap{ overflow-x:auto; border:1px solid var(--border); border-radius:8px; }
+  table{ width:100%; border-collapse:collapse; font-size:0.87rem; min-width:480px; }
+  th{ background:var(--teal); color:#fff; text-align:left; padding:9px 10px; white-space:nowrap; }
+  td{ padding:8px 10px; border-top:1px solid var(--border); white-space:nowrap; }
+  tr:nth-child(even) td{ background:var(--teal-light); }
+  .tag{ display:inline-block; padding:2px 9px; border-radius:99px; font-size:0.78rem; font-weight:600; }
+  .tag.ok{ background:var(--ok); color:var(--ok-ink); }
+  .tag.risk{ background:var(--risk); color:var(--risk-ink); }
+  .controls{ display:flex; gap:14px; flex-wrap:wrap; align-items:flex-end; margin-bottom:16px; }
+  .field label{ display:block; font-size:0.8rem; color:var(--muted); margin-bottom:4px; }
+  select, input[type=number]{
+    font-size:0.9rem; padding:7px 9px; border-radius:6px; border:1px solid var(--border);
+    background:var(--card); color:var(--ink); min-width:150px;
+  }
+  footer{ margin-top:48px; padding-top:18px; border-top:1px solid var(--border); color:var(--muted); font-size:0.82rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Supplier & Procurement Analytics</h1>
+    <p class="sub">Abdul Karim Ssegawa — self-directed Excel projects, built alongside my Data Management coursework</p>
+    <p class="intro">Two small, separate projects exploring workflows that come up across procurement, inventory and supply chain roles: tracking supplier delivery performance against demand, and scoring suppliers on sustainability alongside reliability. Each is its own Excel workbook — this page summarises both.</p>
+  </header>
+
+  <p class="project-label">PROJECT 1</p>
+  <h2 class="project-title">Inventory Replenishment & Supplier Performance Tracker</h2>
+  <section>
+    <h2>Stock Coverage Dashboard</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Product</th><th>Forecasted Demand</th><th>Confirmed Supply</th><th>Coverage</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Wireless Earbuds</td><td>2,700</td><td>2,650</td><td>98.1%</td><td><span class="tag risk">AT RISK</span></td></tr>
+          <tr><td>Phone Case (Bulk Pack)</td><td>5,020</td><td>5,020</td><td>100.0%</td><td><span class="tag ok">OK</span></td></tr>
+          <tr><td>USB-C Charging Cable</td><td>1,880</td><td>1,860</td><td>98.9%</td><td><span class="tag risk">AT RISK</span></td></tr>
+          <tr><td>Laptop Stand</td><td>1,680</td><td>1,680</td><td>100.0%</td><td><span class="tag ok">OK</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Built from 24 purchase orders across 4 suppliers, with a Status formula that auto-flags late and short deliveries. Wireless Earbuds and USB-C Charging Cable are flagged because of one short and one late delivery each — the workbook traces this down to the exact order line.</p>
+  </section>
+
+  <section>
+    <h2>What-If Scenario (interactive)</h2>
+    <div class="controls">
+      <div class="field">
+        <label for="supplier">Supplier</label>
+        <select id="supplier"></select>
+      </div>
+      <div class="field">
+        <label for="delay">Simulated delay (days)</label>
+        <input type="number" id="delay" value="10" min="0" max="60">
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Product</th><th>Demand</th><th>Confirmed Supply</th><th>Adjusted Supply</th><th>Adjusted Coverage</th><th>Impact</th></tr></thead>
+        <tbody id="whatifBody"></tbody>
+      </table>
+    </div>
+    <p class="note">Assumption: a simulated delay treats that supplier's full confirmed quantity for its item as at-risk — a simplification for this demo; a production MRP tool would isolate only the specific late order line.</p>
+  </section>
+
+  <p class="project-label" style="margin-top:44px;">PROJECT 2</p>
+  <h2 class="project-title">Supplier Sustainability Scorecard</h2>
+  <section>
+    <h2>Composite Sourcing Score</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Supplier</th><th>Category</th><th>Sustainability Score</th><th>On-Time Rate</th><th>Composite Score</th><th>Recommendation</th></tr></thead>
+        <tbody>
+          <tr><td>Supplier Alpha</td><td>Electronics components</td><td>55.0</td><td>60%</td><td>57.0</td><td><span class="tag risk">Review</span></td></tr>
+          <tr><td>Supplier Beta</td><td>Packaging & accessories</td><td>91.3</td><td>80%</td><td>86.8</td><td><span class="tag ok">Preferred</span></td></tr>
+          <tr><td>Supplier Gamma</td><td>Cables & connectors</td><td>5.0</td><td>60%</td><td>27.0</td><td><span class="tag risk">Review</span></td></tr>
+          <tr><td>Supplier Delta</td><td>Hardware & fittings</td><td>77.4</td><td>80%</td><td>78.4</td><td><span class="tag ok">Preferred</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Sustainability Score weights emissions intensity (35%), renewable energy use (25%), ISO 14001 certification (20%), and proximity to site (20%). Composite Sourcing Score blends that with on-time delivery performance (60/40) — many retailers and manufacturers now weigh both dimensions when deciding which suppliers to grow volume with.</p>
+  </section>
+
+  <footer>
+    Each project is a separate Excel workbook with live formulas (SUMIFS, COUNTIFS, nested IF, weighted scoring, conditional formatting), built alongside my Data Management coursework. Both are attached with my application. This page is a summary, not a data source.
+  </footer>
+</div>
+
+<script>
+  const items = [
+    { id:"Wireless Earbuds", supplier:"Supplier Alpha", demand:2700, supply:2650 },
+    { id:"Phone Case (Bulk Pack)", supplier:"Supplier Beta", demand:5020, supply:5020 },
+    { id:"USB-C Charging Cable", supplier:"Supplier Gamma", demand:1880, supply:1860 },
+    { id:"Laptop Stand", supplier:"Supplier Delta", demand:1680, supply:1680 },
+  ];
+  const suppliers = [...new Set(items.map(i => i.supplier))];
+  const sel = document.getElementById("supplier");
+  suppliers.forEach(s => {
+    const opt = document.createElement("option");
+    opt.value = s; opt.textContent = s;
+    sel.appendChild(opt);
+  });
+  sel.value = "Supplier Beta";
+
+  function render(){
+    const chosenSupplier = sel.value;
+    const delay = Math.max(0, Number(document.getElementById("delay").value) || 0);
+    const body = document.getElementById("whatifBody");
+    body.innerHTML = "";
+    items.forEach(item => {
+      const atRiskQty = (delay > 0 && item.supplier === chosenSupplier) ? item.supply : 0;
+      const adjSupply = item.supply - atRiskQty;
+      const adjCoverage = item.demand > 0 ? (adjSupply / item.demand) : 0;
+      const impact = (atRiskQty > 0 && adjCoverage < 1) ? "AT RISK" : "OK";
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${item.id}</td>
+        <td>${item.demand.toLocaleString()}</td>
+        <td>${item.supply.toLocaleString()}</td>
+        <td>${adjSupply.toLocaleString()}</td>
+        <td>${(adjCoverage*100).toFixed(1)}%</td>
+        <td><span class="tag ${impact === "AT RISK" ? "risk" : "ok"}">${impact}</span></td>
+      `;
+      body.appendChild(tr);
+    });
+  }
+  sel.addEventListener("change", render);
+  document.getElementById("delay").addEventListener("input", render);
+  render();
+</script>
+</body>
+</html>
