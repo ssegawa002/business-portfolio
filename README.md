@@ -17,7 +17,7 @@ SQL · Python · Power BI · ERP/SAP · Business process modelling
 
 ## Live portfolio
 
-https://ssegawao02.github.io/business-portfolio/
+https://ssegawa002.github.io/business-portfolio/
 
 ## Hosting
 
