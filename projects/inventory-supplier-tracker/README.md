@@ -1,4 +1,4 @@
-# Inventory Replenishment & Supplier Performance Tracker
+# Material Planning & Supplier Performance Analytics
 
 An Excel decision-support tool built around a procurement workflow: compare forecast demand with confirmed supplier supply, identify delivery exceptions, monitor stock coverage and test supplier-delay scenarios.
 
@@ -24,3 +24,9 @@ How can procurement or supply-chain teams identify replenishment risks and suppl
 All supplier, SKU and order data is illustrative sample data created for portfolio demonstration.
 
 [Download the workbook](../../docs/downloads/Inventory_Replenishment_Supplier_Tracker.xlsx)
+
+
+## Decision-support layer
+
+The workbook includes a Material Planning Control Tower that summarizes supplier exceptions,
+inventory coverage and what-if planning. The underlying sheets remain the source model.
